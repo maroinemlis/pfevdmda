@@ -1,0 +1,84 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Créer un compte</mat-card-title>
+  </mat-card-header>
+  <div fxLayout="column">
+    <div fxFlex>
+      <mat-form-field>
+        <input matInput placeholder="Nom : ">
+      </mat-form-field>
+    </div>
+    <div fxFlex>
+      <mat-form-field>
+        <input matInput placeholder="Prénom : ">
+      </mat-form-field>
+    </div>
+    <div fxFlex>
+      <mat-form-field>
+        <input matInput placeholder="Adresse e-mail : ">
+      </mat-form-field>
+    </div>
+    <div fxFlex>
+      <mat-form-field>
+        <input matInput placeholder="Mot de passe : ">
+      </mat-form-field>
+    </div>
+    <div fxFlex>
+      <mat-form-field>
+        <input matInput placeholder="Répéter votre mot de passe : ">
+      </mat-form-field>
+    </div>
+    <div fxFlex>
+      <mat-form-field>
+        <input matInput placeholder="Localisation" #autocomplete>
+      </mat-form-field>
+    </div>
+    <div fxFlex>
+      <div fxLayout="row" fxLayoutAlign="start">
+        <div fxFlex="30" fxFlex.xs="100">
+          <button mat-raised-button color="primary">Créer</button>
+        </div>
+        <div fxFlex="30" fxFlex.xs="100">
+          <button mat-raised-button color="primary">Anuller</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-card>
+
+<!--
+<button mat-raised-button (click)="isLinear = true" id="toggle-linear">Enable linear mode</button>
+
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+  <mat-step>
+    <form>
+      <ng-template matStepLabel>Fill out your name</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Last name, First name" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <form>
+      <ng-template matStepLabel>Fill out your address</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Address" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    You are now done.
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>-->

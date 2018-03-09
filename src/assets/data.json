@@ -1,0 +1,51 @@
+{
+  "sujet": "Population",
+  "dimension": {
+    "type": "Totale",
+    "elements": [
+      {
+        "element": null,
+        "nombre": 220,
+        "dimension": {
+          "type": "Genre",
+          "elements": [
+            {
+              "element": "Homme",
+              "nombre": 100,
+              "dimension": {
+                "type": "age",
+                "elements": [
+                  {
+                    "element": "0-10",
+                    "nombre": 40
+                  },
+                  {
+                    "element": "11-20",
+                    "nombre": 60
+                  }
+                ]
+              }
+            },
+            {
+              "element": "Femme",
+              "nombre": 120,
+              "dimension": {
+                "type": "age",
+                "elements": [
+                  {
+                    "element": "0-10",
+                    "nombre": 80
+                  },
+                  {
+                    "element": "11-20",
+                    "nombre": 40
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

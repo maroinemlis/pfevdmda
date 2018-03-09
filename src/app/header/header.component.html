@@ -1,0 +1,48 @@
+<mat-toolbar color="primary" class="header">
+    <button color="primary" mat-mini-fab (click)="sidenav.toggle()" matTooltip="Afficher la liste de navigation" matTooltipPosition="after">
+        <mat-icon>view_headline</mat-icon>
+    </button>
+    <span>{{titleText}} </span>
+    <span class="example-fill-remaining-space"></span>
+
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="changeLanguage('Francais')">
+            <span>Francais</span>
+        </button>
+        <button mat-menu-item (click)="changeLanguage('English')">
+            <span>English</span>
+        </button>
+
+    </mat-menu>
+
+    <button color="primary" mat-mini-fab [matMenuTriggerFor]="matMenuTheme" matTooltip="Changer le théme de couleur !">
+        <mat-icon>palette</mat-icon>
+    </button>
+    <mat-menu #matMenuTheme="matMenu">
+        <div fxLayout="row" fxLayoutAlign="start">
+            <div fxFlex="25">
+                <button color="primary" mat-icon-button (click)="themeChange('light-theme')">
+                    <mat-icon style="color:#3F51B5">fiber_manual_record</mat-icon>
+                </button>
+            </div>
+            <div fxFlex="25">
+                <button mat-icon-button (click)="themeChange('dark-theme')">
+                    <mat-icon style="color:#E91E63">fiber_manual_record</mat-icon>
+                </button>
+            </div>
+            <div fxFlex="25">
+                <button mat-icon-button (click)="themeChange('light-theme2')">
+                    <mat-icon style="color:#9C27B0">fiber_manual_record</mat-icon>
+                </button>
+            </div>
+            <div fxFlex="25">
+                <button mat-icon-button (click)="themeChange('dark-theme2')">
+                    <mat-icon style="color:#4CAF50">fiber_manual_record</mat-icon>
+                </button>
+            </div>
+        </div>
+    </mat-menu>
+</mat-toolbar>

@@ -1,0 +1,29 @@
+<mat-card>
+  <mat-card-title>Générateur de dimension manuel</mat-card-title>
+  <div fxLayout="column">
+    <div fxFlex="100" fxFlexOffset="30px">
+      <mat-card>
+        <mat-form-field *ngFor="let dimension of dimensions; let i = index;trackBy:trackByIndex;">
+          <mat-select [placeholder]="dimension.name" multiple [(ngModel)]="optionBinders[i]" (ngModelChange)="f()">
+            <mat-option *ngFor="let element of dimension.elements" [value]="element">{{element}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </mat-card>
+    </div>
+    <div fxFlex="100" fxFlexOffset="30px">
+      <mat-card>
+        <mat-radio-group [(ngModel)]="rad" (ngModelChange)="f()">
+          <div fxLayoutWrap="row" fxLayoutAlign="center stretch" fxLayoutGap="30px">
+            <mat-radio-button color="primary" *ngFor="let dim of dimensions" [value]="dim.name" fxFlex="10">
+              {{dim.name}}
+            </mat-radio-button>
+          </div>
+        </mat-radio-group>
+      </mat-card>
+    </div>
+    <div fxFlex="100" fxFlexOffset="30px">
+      <app-chart-for-map></app-chart-for-map>
+    </div>
+  </div>
+
+</mat-card>

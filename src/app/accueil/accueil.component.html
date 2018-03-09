@@ -1,0 +1,82 @@
+<div [class]="theme">
+  <mat-toolbar color="primary" class="header">
+    <button mat-button>S'identifier</button>
+    <button mat-button>S'inscrire</button>
+    <button mat-button>Connexion</button>
+    <button mat-button>Connexion</button>
+    <button mat-button>Connexion</button>
+    <button mat-button>Connexion</button>
+    <div class="goRight"></div>
+    <button color="primary" mat-mini-fab [matMenuTriggerFor]="matMenuTheme" matTooltip="Changer le théme de couleur !">
+      <mat-icon>palette</mat-icon>
+    </button>
+    <mat-menu #matMenuTheme="matMenu">
+      <div fxLayout="row" fxLayoutAlign="start">
+        <div fxFlex="25">
+          <button color="primary" mat-icon-button (click)="themeChange('light-theme')">
+            <mat-icon style="color:#3F51B5">fiber_manual_record</mat-icon>
+          </button>
+        </div>
+        <div fxFlex="25">
+          <button mat-icon-button (click)="themeChange('dark-theme')">
+            <mat-icon style="color:#E91E63">fiber_manual_record</mat-icon>
+          </button>
+        </div>
+        <div fxFlex="25">
+          <button mat-icon-button (click)="themeChange('light-theme2')">
+            <mat-icon style="color:#9C27B0">fiber_manual_record</mat-icon>
+          </button>
+        </div>
+        <div fxFlex="25">
+          <button mat-icon-button (click)="themeChange('dark-theme2')">
+            <mat-icon style="color:#4CAF50">fiber_manual_record</mat-icon>
+          </button>
+        </div>
+      </div>
+    </mat-menu>
+
+  </mat-toolbar>
+  <div style="height:100px;">
+  </div>
+
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <div fxLayoutWrap="row" fxLayoutAlign="center stretch">
+        <div fxFlex="100">
+          <span style="font-size: 20px;">Modélisation des données multidimensionnelles </span>
+        </div>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-drawer-container>
+    <!--
+    -->
+    <mat-drawer-content>
+
+      <div fxLayoutWrap="row" fxLayoutAlign="center">
+        <div fxFlex="60">
+          <mat-tab-group>
+            <mat-tab label="S'identifier">
+              <mat-card>
+                <app-login></app-login>
+              </mat-card>
+            </mat-tab>
+            <mat-tab label="S'inscrire">
+              <mat-card>
+                <app-acount></app-acount>
+              </mat-card>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
+
+
+    </mat-drawer-content>
+    <!--
+    -->
+  </mat-drawer-container>
+
+
+  <mat-toolbar color="accent" class="footer"></mat-toolbar>
+
+</div>

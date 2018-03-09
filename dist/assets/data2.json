@@ -1,0 +1,116 @@
+{
+  "dimension": {
+    "type": "Time",
+    "nom": "Population",
+    "elements": [
+      {
+        "label": "2000",
+        "nombre": 100000000000000,
+        "dimension": {
+          "type": "Geo",
+          "nom": "Country",
+          "elements": [
+            {
+              "label": "Tunisia",
+              "nombre": 500,
+              "dimension": {
+                "type": "Geo",
+                "nom": "Governorate",
+                "elements": [
+                  {
+                    "label": "Sousse",
+                    "nombre": 200,
+                    "dimension": {
+                      "type": "Geo",
+                      "nom": "Delegation",
+                      "elements": [
+                        {
+                          "label": "Msaken",
+                          "nombre": 90,
+                          "dimension": {
+                            "type": "Enum",
+                            "nom": "Genre",
+                            "elements": [
+                              {
+                                "label": "Homme",
+                                "nombre": 43,
+                                "dimension": {
+                                  "type": "Enum",
+                                  "nom": "Age",
+                                  "elements": [
+                                    {
+                                      "label": "<30",
+                                      "nombre": 25
+                                    },
+                                    {
+                                      "label": ">30",
+                                      "nombre": 18
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "label": "Femme",
+                                "nombre": 47,
+                                "dimension": {
+                                  "type": "Enum",
+                                  "nom": "Age"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "label": "Jawhra",
+                          "nombre": 110,
+                          "dimension": {
+                            "type": "Geo",
+                            "nom": "Commune"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "label": "Sfax",
+                    "nombre": 300,
+                    "dimension": {
+                      "type": "Geo",
+                      "nom": "Commune",
+                      "elements": [
+                        {
+                          "label": "Sidi Mansour",
+                          "nombre": 150,
+                          "dimension": {
+                            "type": "Geo",
+                            "nom": "Commune"
+                          }
+                        },
+                        {
+                          "label": "Ezzit",
+                          "nombre": 150,
+                          "dimension": {
+                            "type": "Geo",
+                            "nom": "Commune"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "label": "2001",
+        "nombre": 100000000000000,
+        "dimension": {
+          "type": "Geo",
+          "nom": "Country"
+        }
+      }
+    ]
+  }
+}

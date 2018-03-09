@@ -1,0 +1,22 @@
+<div [class]="theme">
+  <!--header-->
+  <app-header [sidenav]="sidenav" (onthemeChange)=onthemeChange($event)></app-header>
+  <div style="height:70px;"></div>
+  <!--sidenav-->
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" opened="false">
+      <app-sidebar></app-sidebar>
+    </mat-sidenav>
+    <mat-sidenav-content class="padding">
+
+      <div fxLayoutWrap="row" fxLayoutAlign="center stretch">
+        <div fxFlex="98" fxLayoutGap="20px">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+  <app-footer></app-footer>
+</div>
